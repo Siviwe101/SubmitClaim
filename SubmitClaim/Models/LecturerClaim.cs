@@ -7,7 +7,8 @@ namespace SubmitClaim.Models;
 public class LecturerClaim
 {
     [Key]
-    public int Id { get; set; }
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public string? Id { get; set; }
     
     [Required]
     [Range(1, 100, ErrorMessage = "Hours worked must be between 1 and 100.")]
@@ -16,7 +17,7 @@ public class LecturerClaim
     [Range(10, 1000, ErrorMessage = "Hourly rate must be between 10 and 1000.")]
     public double HourlyRate { get; set; }
     public string AdditionalNotes { get; set; }
-    public DateTime SubmissionDate { get; set; }
+    public string SubmissionDate { get; set; }
     [DefaultValue("Pending")]  // Set default value to "Pending"
     public string Status { get; set; } = "Pending"; // Default status value --- "Pending", "Approved", "Rejected"
     public string? FilePath { get; set; } // For storing file path
@@ -24,6 +25,6 @@ public class LecturerClaim
     
     // Navigation property to the ApplicationUser
     [ForeignKey("UserId")]
-    public ApplicationUser User { get; set; }
+    public string? UserId { get; set; }
     
 }
