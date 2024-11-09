@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "cl8BXyaWYIU=",
+  "dgSpecHash": "IucbnwE/MIE=",
   "success": true,
   "projectFilePath": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/SubmitClaim.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/ElonaFrance/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
+    "/Users/ElonaFrance/.nuget/packages/system.diagnostics.eventlog/6.0.0/system.diagnostics.eventlog.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
