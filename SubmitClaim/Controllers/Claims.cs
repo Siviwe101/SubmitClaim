@@ -78,6 +78,7 @@ namespace SubmitClaim.Controllers
                     lecturerClaim.Id = Guid.NewGuid();
                     lecturerClaim.UserId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Associate claim with logged-in user
                     lecturerClaim.Status = "Pending";  // Default status
+                    lecturerClaim.SubmissionDate = DateTime.Now.ToString("dd/MM/yyyy");
 
                     context.Add(lecturerClaim);
                     await context.SaveChangesAsync();

@@ -16,7 +16,7 @@ public class LecturerClaim
     [Range(10, 1000, ErrorMessage = "Hourly rate must be between 10 and 1000.")]
     public double HourlyRate { get; set; }
     public string AdditionalNotes { get; set; }
-    public string SubmissionDate { get; set; }
+    public string? SubmissionDate { get; set; } = DateTime.Now.ToString("dd/MM/yyyy");
     [DefaultValue("Pending")]  // Set default value to "Pending"
     public string Status { get; set; } = "Pending"; // Default status value --- "Pending", "Approved", "Rejected"
     public string? FilePath { get; set; } // For storing file path

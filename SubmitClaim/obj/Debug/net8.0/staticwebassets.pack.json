@@ -245,8 +245,16 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
+      "Id": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/uploads/694f9e84-19c7-4af9-9884-0e1207cad3c8.pdf",
+      "PackagePath": "staticwebassets/uploads/694f9e84-19c7-4af9-9884-0e1207cad3c8.pdf"
+    },
+    {
       "Id": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/uploads/b475041c-0613-453d-a4af-1eb62786fc19.pdf",
       "PackagePath": "staticwebassets/uploads/b475041c-0613-453d-a4af-1eb62786fc19.pdf"
+    },
+    {
+      "Id": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/uploads/f3bc2a2c-9797-41e0-8924-30ba3f3caced.pdf",
+      "PackagePath": "staticwebassets/uploads/f3bc2a2c-9797-41e0-8924-30ba3f3caced.pdf"
     },
     {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.SubmitClaim.Microsoft.AspNetCore.StaticWebAssets.props",

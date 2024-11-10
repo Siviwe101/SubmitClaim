@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NwfWkNPENXEIpocJ18iaVaokg3lYgsHTcLQWLdArLfg=",
+  "Hash": "nHYE0vxQ0cmb4x5sUiKOsP5H7nx0OMvzlinjobJLD+A=",
   "Source": "SubmitClaim",
   "BasePath": "_content/SubmitClaim",
   "Mode": "Default",
@@ -2335,6 +2335,25 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
     },
     {
+      "Identity": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/uploads/694f9e84-19c7-4af9-9884-0e1207cad3c8.pdf",
+      "SourceId": "SubmitClaim",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/",
+      "BasePath": "_content/SubmitClaim",
+      "RelativePath": "uploads/694f9e84-19c7-4af9-9884-0e1207cad3c8.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/694f9e84-19c7-4af9-9884-0e1207cad3c8.pdf"
+    },
+    {
       "Identity": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/uploads/b475041c-0613-453d-a4af-1eb62786fc19.pdf",
       "SourceId": "SubmitClaim",
       "SourceType": "Discovered",
@@ -2352,6 +2371,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/uploads/b475041c-0613-453d-a4af-1eb62786fc19.pdf"
+    },
+    {
+      "Identity": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/uploads/f3bc2a2c-9797-41e0-8924-30ba3f3caced.pdf",
+      "SourceId": "SubmitClaim",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/",
+      "BasePath": "_content/SubmitClaim",
+      "RelativePath": "uploads/f3bc2a2c-9797-41e0-8924-30ba3f3caced.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/f3bc2a2c-9797-41e0-8924-30ba3f3caced.pdf"
     }
   ]
 }

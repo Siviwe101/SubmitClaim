@@ -237,11 +237,9 @@ namespace SubmitClaim.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("SubmissionDate")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
