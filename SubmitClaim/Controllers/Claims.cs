@@ -132,5 +132,42 @@ namespace SubmitClaim.Controllers
             var fileExtension = Path.GetExtension(file.FileName).ToLowerInvariant();
             return allowedExtensions.Contains(fileExtension);
         }
+        
+        // GET: Claims/ManageClaims
+        public async Task<IActionResult> ManageClaims()
+        {
+            var claims = await context.LecturerClaims.ToListAsync();
+            return View(claims);
+        }
+
+        // POST: Claims/Approve/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Approve(Guid id)
+        {
+            var claim = await context.LecturerClaims.FindAsync(id);
+            if (claim == null) return NotFound();
+
+            claim.Status = "Approved";
+            context.Update(claim);
+            await context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(ManageClaims));
+        }
+
+        // POST: Claims/Reject/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Reject(Guid id)
+        {
+            var claim = await context.LecturerClaims.FindAsync(id);
+            if (claim == null) return NotFound();
+
+            claim.Status = "Rejected";
+            context.Update(claim);
+            await context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(ManageClaims));
+        }
     }
 }

@@ -24,6 +24,9 @@
     <ItemGroup>
       <_ContentIncludedByDefault Remove="Views\Claims\Create.cshtml" />
       <_ContentIncludedByDefault Remove="Views\Claims\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\ManageClaims\Claims.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\ManageClaims\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\ManageClaims\Reject.cshtml" />
     </ItemGroup>
 
     <ItemGroup>

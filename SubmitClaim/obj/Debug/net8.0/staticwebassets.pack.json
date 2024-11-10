@@ -249,12 +249,20 @@
       "PackagePath": "staticwebassets/uploads/694f9e84-19c7-4af9-9884-0e1207cad3c8.pdf"
     },
     {
+      "Id": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/uploads/b04a5dda-e9c1-4e05-ad42-9baf1a41cd31.pdf",
+      "PackagePath": "staticwebassets/uploads/b04a5dda-e9c1-4e05-ad42-9baf1a41cd31.pdf"
+    },
+    {
       "Id": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/uploads/b475041c-0613-453d-a4af-1eb62786fc19.pdf",
       "PackagePath": "staticwebassets/uploads/b475041c-0613-453d-a4af-1eb62786fc19.pdf"
     },
     {
       "Id": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/uploads/f3bc2a2c-9797-41e0-8924-30ba3f3caced.pdf",
       "PackagePath": "staticwebassets/uploads/f3bc2a2c-9797-41e0-8924-30ba3f3caced.pdf"
+    },
+    {
+      "Id": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/uploads/fbdaee22-b2ba-4934-8216-59ab3b4ecc97.pdf",
+      "PackagePath": "staticwebassets/uploads/fbdaee22-b2ba-4934-8216-59ab3b4ecc97.pdf"
     },
     {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.SubmitClaim.Microsoft.AspNetCore.StaticWebAssets.props",
