@@ -292,3 +292,8 @@
 /Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/obj/Debug/net8.0/SubmitClaim.pdb
 /Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/obj/Debug/net8.0/SubmitClaim.genruntimeconfig.cache
 /Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/obj/Debug/net8.0/ref/SubmitClaim.dll
+/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/bin/Debug/net8.0/BouncyCastle.Cryptography.dll
+/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/bin/Debug/net8.0/DocumentFormat.OpenXml.dll
+/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/bin/Debug/net8.0/DocumentFormat.OpenXml.Framework.dll
+/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/bin/Debug/net8.0/itextsharp.dll
+/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/bin/Debug/net8.0/System.IO.Packaging.dll
