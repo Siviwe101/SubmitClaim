@@ -245,6 +245,10 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
+      "Id": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/uploads/b475041c-0613-453d-a4af-1eb62786fc19.pdf",
+      "PackagePath": "staticwebassets/uploads/b475041c-0613-453d-a4af-1eb62786fc19.pdf"
+    },
+    {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.SubmitClaim.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

@@ -499,7 +499,7 @@
     </routine>
     <schema id="191" parent="1" name="main">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-11-10.00:03:25</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-11-10.01:49:22</LastIntrospectionLocalTimestamp>
     </schema>
     <argument id="192" parent="16">
       <ArgumentDirection>R</ArgumentDirection>
@@ -1611,16 +1611,16 @@
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="567" parent="555" name="ClaimType">
+    <column id="567" parent="555" name="RoleId">
+      <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="568" parent="555" name="ClaimValue">
+    <column id="568" parent="555" name="ClaimType">
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="569" parent="555" name="RoleId">
-      <NotNull>1</NotNull>
+    <column id="569" parent="555" name="ClaimValue">
       <Position>4</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
@@ -1642,15 +1642,15 @@
       <Position>1</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="574" parent="556" name="ConcurrencyStamp">
+    <column id="574" parent="556" name="Name">
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="575" parent="556" name="Name">
+    <column id="575" parent="556" name="NormalizedName">
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="576" parent="556" name="NormalizedName">
+    <column id="576" parent="556" name="ConcurrencyStamp">
       <Position>4</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
@@ -1661,6 +1661,7 @@
     </index>
     <index id="578" parent="556" name="RoleNameIndex">
       <ColNames>NormalizedName</ColNames>
+      <Unique>1</Unique>
     </index>
     <key id="579" parent="556" name="PK_AspNetRoles">
       <ColNames>Id</ColNames>
@@ -1673,16 +1674,16 @@
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="581" parent="557" name="ClaimType">
+    <column id="581" parent="557" name="UserId">
+      <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="582" parent="557" name="ClaimValue">
+    <column id="582" parent="557" name="ClaimType">
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="583" parent="557" name="UserId">
-      <NotNull>1</NotNull>
+    <column id="583" parent="557" name="ClaimValue">
       <Position>4</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
@@ -1767,37 +1768,40 @@ RoleId</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <index id="600" parent="559" name="IX_AspNetUserRoles_UserId">
-      <ColNames>UserId</ColNames>
-    </index>
-    <index id="601" parent="559" name="IX_AspNetUserRoles_RoleId">
+    <index id="600" parent="559" name="IX_AspNetUserRoles_RoleId">
       <ColNames>RoleId</ColNames>
     </index>
-    <key id="602" parent="559" name="PK_AspNetUserRoles">
+    <key id="601" parent="559" name="PK_AspNetUserRoles">
       <ColNames>UserId
 RoleId</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_AspNetUserRoles_1</UnderlyingIndexName>
     </key>
-    <column id="603" parent="560" name="UserId">
+    <column id="602" parent="560" name="UserId">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="604" parent="560" name="LoginProvider">
+    <column id="603" parent="560" name="LoginProvider">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="605" parent="560" name="Name">
+    <column id="604" parent="560" name="Name">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="606" parent="560" name="Value">
+    <column id="605" parent="560" name="Value">
       <Position>4</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
+    <foreign-key id="606" parent="560" name="FK_AspNetUserTokens_AspNetUsers_UserId">
+      <ColNames>UserId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableName>AspNetUsers</RefTableName>
+    </foreign-key>
     <index id="607" parent="560" name="sqlite_autoindex_AspNetUserTokens_1">
       <ColNames>UserId
 LoginProvider
@@ -1930,6 +1934,7 @@ Name</ColNames>
       <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="635" parent="562" name="UserId">
+      <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>

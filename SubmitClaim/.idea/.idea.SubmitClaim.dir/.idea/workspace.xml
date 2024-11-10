@@ -9,28 +9,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c1c29e4-f91d-4896-b43c-3e9f1c1fc084" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Views/Claims/ManageClaims.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SubmitClaim.dir/.idea/dataSources/3763f8cc-fe9e-427c-86b3-c3c91e59ac1f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SubmitClaim.dir/.idea/dataSources/3763f8cc-fe9e-427c-86b3-c3c91e59ac1f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SubmitClaim.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SubmitClaim.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Register.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Register.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/ClaimsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ClaimsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/LecturerClaim.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/LecturerClaim.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SubmitClaim.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SubmitClaim.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Admin/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Admin/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Claims/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Claims/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Claims/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Claims/Delete.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Claims/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Claims/Details.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Claims/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Claims/Edit.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Claims/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Claims/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/app.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.db-shm" beforeDir="false" afterPath="$PROJECT_DIR$/app.db-shm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/app.db-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/SubmitClaim.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/SubmitClaim.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/SubmitClaim.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/SubmitClaim.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/app.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.dll" afterDir="false" />
@@ -133,7 +131,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731159130901</updated>
       <workItem from="1731159131878" duration="5000" />
-      <workItem from="1731159164066" duration="31777000" />
+      <workItem from="1731159164066" duration="41827000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "epCIM1TPUhgldfNo7aQd9qTCHg8SsGYaw8/vYHov2OY=",
+  "Hash": "NwfWkNPENXEIpocJ18iaVaokg3lYgsHTcLQWLdArLfg=",
   "Source": "SubmitClaim",
   "BasePath": "_content/SubmitClaim",
   "Mode": "Default",
@@ -2333,6 +2333,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Identity": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/uploads/b475041c-0613-453d-a4af-1eb62786fc19.pdf",
+      "SourceId": "SubmitClaim",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/",
+      "BasePath": "_content/SubmitClaim",
+      "RelativePath": "uploads/b475041c-0613-453d-a4af-1eb62786fc19.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/b475041c-0613-453d-a4af-1eb62786fc19.pdf"
     }
   ]
 }

@@ -24,6 +24,6 @@ public class LecturerClaim
     
     // Navigation property to the ApplicationUser
     [ForeignKey("UserId")]
-    public string UserId { get; set; }
+    public string? UserId { get; set; }
     
 }
