@@ -2,38 +2,40 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SubmitClaim.Data;
 using SubmitClaim.Models;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
-namespace SubmitClaim.Controllers
+namespace SubmitClaims.Controllers
 {
     public class ClaimsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IWebHostEnvironment _env;
+        private readonly ILogger<ClaimsController> _logger;
 
-        public ClaimsController(ApplicationDbContext context)
+        public ClaimsController(ApplicationDbContext context, IWebHostEnvironment env, ILogger<ClaimsController> logger)
         {
             _context = context;
+            _env = env;
+            _logger = logger;
         }
 
         // GET: Claims
         public async Task<IActionResult> Index()
         {
-            return View(await _context.LecturerClaims.ToListAsync());
+            var claims = await _context.LecturerClaims.ToListAsync();
+            return View(claims);
         }
 
         // GET: Claims/Details/5
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Details(string? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
 
-            var lecturerClaim = await _context.LecturerClaims
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (lecturerClaim == null)
-            {
-                return NotFound();
-            }
+            var lecturerClaim = await _context.LecturerClaims.FindAsync(id);
+            if (lecturerClaim == null) return NotFound();
 
             return View(lecturerClaim);
         }
@@ -45,108 +47,192 @@ namespace SubmitClaim.Controllers
         }
 
         // POST: Claims/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,HoursWorked,HourlyRate,AdditionalNotes,SubmissionDate,Status,FilePath,UserId")] LecturerClaim lecturerClaim)
+        public async Task<IActionResult> Create(
+            [Bind("LecturerId,HoursWorked,HourlyRate,AdditionalNotes,SubmissionDate,Status")]
+            LecturerClaim lecturerClaim, IFormFile uploadedFile)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
+                _logger.LogDebug("Model validation failed for creating claim: {Errors}", string.Join(", ", ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage)));
+                return View(lecturerClaim);
+            }
+
+            try
+            {
+                // Handle file upload
+                if (uploadedFile != null && uploadedFile.Length > 0)
+                {
+                    if (!IsValidFile(uploadedFile))
+                    {
+                        ModelState.AddModelError("", "Invalid file type. Allowed types: .pdf, .docx, .xlsx");
+                        return View(lecturerClaim);
+                    }
+
+                    string uniqueFileName = await SaveUploadedFile(uploadedFile);
+                    lecturerClaim.FilePath = uniqueFileName;
+                }
+
+                lecturerClaim.Status = "Pending";  // Default status for a new claim
                 _context.Add(lecturerClaim);
-                await _context.SaveChangesAsync();
+
+                int result = await _context.SaveChangesAsync();
+                if (result > 0)
+                {
+                    _logger.LogDebug("Claim created successfully with ID: {ClaimId}", lecturerClaim.Id);
+                }
+                else
+                {
+                    _logger.LogError("Failed to save claim to the database.");
+                    ModelState.AddModelError("", "An error occurred while saving the claim.");
+                    return View(lecturerClaim);
+                }
+
                 return RedirectToAction(nameof(Index));
             }
-            return View(lecturerClaim);
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error while creating claim");
+                ModelState.AddModelError("", "An error occurred while creating the claim.");
+                return View(lecturerClaim);
+            }
         }
 
         // GET: Claims/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        public async Task<IActionResult> Edit(string? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
 
             var lecturerClaim = await _context.LecturerClaims.FindAsync(id);
-            if (lecturerClaim == null)
-            {
-                return NotFound();
-            }
+            if (lecturerClaim == null) return NotFound();
+
             return View(lecturerClaim);
         }
 
         // POST: Claims/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Id,HoursWorked,HourlyRate,AdditionalNotes,SubmissionDate,Status,FilePath,UserId")] LecturerClaim lecturerClaim)
+        public async Task<IActionResult> Edit(string id,
+            [Bind("Id,LecturerId,HoursWorked,HourlyRate,AdditionalNotes,SubmissionDate,Status")]
+            LecturerClaim lecturerClaim, IFormFile uploadedFile)
         {
-            if (id != lecturerClaim.Id)
+            if (id != lecturerClaim.Id.ToString()) return NotFound();
+
+            if (!ModelState.IsValid)
             {
-                return NotFound();
+                _logger.LogDebug("Model validation failed for editing claim with ID: {ClaimId}", id);
+                return View(lecturerClaim);
             }
 
-            if (ModelState.IsValid)
+            try
             {
-                try
+                var existingClaim = await _context.LecturerClaims.FindAsync(id);
+                if (existingClaim == null) return NotFound();
+
+                // Handle file upload
+                if (uploadedFile != null && uploadedFile.Length > 0)
                 {
-                    _context.Update(lecturerClaim);
-                    await _context.SaveChangesAsync();
+                    if (!IsValidFile(uploadedFile))
+                    {
+                        ModelState.AddModelError("", "Invalid file type. Allowed types: .pdf, .docx, .xlsx");
+                        return View(lecturerClaim);
+                    }
+
+                    // Delete old file if exists
+                    if (!string.IsNullOrEmpty(existingClaim.FilePath))
+                    {
+                        DeleteFile(existingClaim.FilePath);
+                    }
+
+                    string uniqueFileName = await SaveUploadedFile(uploadedFile);
+                    existingClaim.FilePath = uniqueFileName;
                 }
-                catch (DbUpdateConcurrencyException)
+
+                // Update other fields
+                existingClaim.HoursWorked = lecturerClaim.HoursWorked;
+                existingClaim.HourlyRate = lecturerClaim.HourlyRate;
+                existingClaim.AdditionalNotes = lecturerClaim.AdditionalNotes;
+                existingClaim.SubmissionDate = lecturerClaim.SubmissionDate;
+                existingClaim.Status = lecturerClaim.Status;
+
+                int result = await _context.SaveChangesAsync();
+                if (result > 0)
                 {
-                    if (!LecturerClaimExists(lecturerClaim.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    _logger.LogDebug("Claim updated successfully with ID: {ClaimId}", lecturerClaim.Id);
                 }
+                else
+                {
+                    _logger.LogError("Failed to update claim in the database.");
+                    ModelState.AddModelError("", "An error occurred while updating the claim.");
+                    return View(lecturerClaim);
+                }
+
                 return RedirectToAction(nameof(Index));
             }
-            return View(lecturerClaim);
-        }
-
-        // GET: Claims/Delete/5
-        public async Task<IActionResult> Delete(string id)
-        {
-            if (id == null)
+            catch (DbUpdateConcurrencyException)
             {
-                return NotFound();
+                if (!LecturerClaimExists(lecturerClaim.Id.ToString())) return NotFound();
+                throw;
             }
-
-            var lecturerClaim = await _context.LecturerClaims
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (lecturerClaim == null)
+            catch (Exception ex)
             {
-                return NotFound();
+                _logger.LogError(ex, "Error while editing claim");
+                ModelState.AddModelError("", "An error occurred while editing the claim.");
+                return View(lecturerClaim);
             }
-
-            return View(lecturerClaim);
         }
 
-        // POST: Claims/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        // Helper method to save the uploaded file and return only the filename with its extension
+        private async Task<string> SaveUploadedFile(IFormFile uploadedFile)
         {
-            var lecturerClaim = await _context.LecturerClaims.FindAsync(id);
-            if (lecturerClaim != null)
+            try
             {
-                _context.LecturerClaims.Remove(lecturerClaim);
+                // Generate a unique file name
+                string uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(uploadedFile.FileName);
+                string filePath = Path.Combine(_env.WebRootPath, "uploads", uniqueFileName);
+
+                // Save the file to disk
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await uploadedFile.CopyToAsync(fileStream);
+                }
+
+                return uniqueFileName;
             }
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error while saving file");
+                throw;
+            }
         }
 
-        private bool LecturerClaimExists(string id)
+        // Helper method to delete a file from the server
+        private void DeleteFile(string fileName)
         {
-            return _context.LecturerClaims.Any(e => e.Id == id);
+            try
+            {
+                var filePath = Path.Combine(_env.WebRootPath, "uploads", fileName);
+                if (System.IO.File.Exists(filePath))
+                {
+                    System.IO.File.Delete(filePath);
+                    _logger.LogDebug("File deleted successfully: {FilePath}", fileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error while deleting file: {FilePath}", fileName);
+            }
         }
+
+        // Helper method to validate the uploaded file type
+        private bool IsValidFile(IFormFile file)
+        {
+            var allowedExtensions = new[] { ".pdf", ".docx", ".xlsx" };
+            var fileExtension = Path.GetExtension(file.FileName).ToLowerInvariant();
+            return allowedExtensions.Contains(fileExtension);
+        }
+
+        private bool LecturerClaimExists(string id) => _context.LecturerClaims.Any(e => e.Id.ToString() == id);
     }
 }

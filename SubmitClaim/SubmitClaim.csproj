@@ -26,4 +26,8 @@
       <_ContentIncludedByDefault Remove="Views\Claims\Index.cshtml" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Tests\" />
+    </ItemGroup>
+
 </Project>

@@ -6,9 +6,8 @@ namespace SubmitClaim.Models;
 
 public class LecturerClaim
 {
-    [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public string? Id { get; set; }
+    [Key] 
+    public Guid Id { get; set; }
     
     [Required]
     [Range(1, 100, ErrorMessage = "Hours worked must be between 1 and 100.")]
@@ -25,6 +24,6 @@ public class LecturerClaim
     
     // Navigation property to the ApplicationUser
     [ForeignKey("UserId")]
-    public string? UserId { get; set; }
+    public string UserId { get; set; }
     
 }

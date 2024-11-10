@@ -12,4 +12,5 @@ public class ApplicationDbContext : IdentityDbContext
     }
     public DbSet<LecturerClaim> LecturerClaims { get; set; }
     
+    
 }

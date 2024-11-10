@@ -9,90 +9,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c1c29e4-f91d-4896-b43c-3e9f1c1fc084" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Controllers/AdminController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Admin/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/Claims/ManageClaims.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SubmitClaim.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SubmitClaim.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/ClaimsController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ApplicationUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ApplicationUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Register.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Register.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/ClaimsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ClaimsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ApplicationDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/LecturerClaim.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/LecturerClaim.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SubmitClaim.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SubmitClaim.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Admin/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Admin/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Claims/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Claims/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Claims/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Claims/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/app.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Microsoft.CodeAnalysis.CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Microsoft.CodeAnalysis.CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Microsoft.CodeAnalysis.Workspaces.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Microsoft.CodeAnalysis.Workspaces.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Microsoft.CodeAnalysis.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Microsoft.CodeAnalysis.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Mono.TextTemplating.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Mono.TextTemplating.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/SubmitClaim.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/SubmitClaim.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.db-shm" beforeDir="false" afterPath="$PROJECT_DIR$/app.db-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/app.db-wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/SubmitClaim.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/SubmitClaim.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/SubmitClaim.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/SubmitClaim.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/System.CodeDom.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/System.CodeDom.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/System.Composition.AttributedModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/System.Composition.AttributedModel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/System.Composition.Convention.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/System.Composition.Convention.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/System.Composition.Hosting.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/System.Composition.Hosting.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/System.Composition.Runtime.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/System.Composition.Runtime.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/System.Composition.TypedParts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/System.Composition.TypedParts.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/app.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.dll" afterDir="false" />
@@ -100,13 +38,6 @@
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/SubmitClaim.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/ref/SubmitClaim.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/ref/SubmitClaim.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/refint/SubmitClaim.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/refint/SubmitClaim.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/SubmitClaim.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/SubmitClaim.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/SubmitClaim.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/SubmitClaim.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/SubmitClaim.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/obj/SubmitClaim.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,10 +64,12 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bf9021a960b74107a7e141aa06bc9d8a0a53c929178c2fb95b1597be8af8dc/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c7a564dc856633b6d353cd3931fb52f03029bf712f17f3e163275cebdcdba47/RazorPagesEndpointRouteBuilderExtensions.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3
-}</component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
   <component name="ProjectId" id="2ocBl1gZJiF1WzEZUelBaYapB8c" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -155,6 +88,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "database.query.execution",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -199,7 +133,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731159130901</updated>
       <workItem from="1731159131878" duration="5000" />
-      <workItem from="1731159164066" duration="13458000" />
+      <workItem from="1731159164066" duration="31777000" />
     </task>
     <servers />
   </component>

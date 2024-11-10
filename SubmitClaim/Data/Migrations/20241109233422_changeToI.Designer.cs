@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SubmitClaim.Data;
 
@@ -10,9 +11,11 @@ using SubmitClaim.Data;
 namespace SubmitClaim.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241109233422_changeToI")]
+    partial class changeToI
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.10");
@@ -215,7 +218,7 @@ namespace SubmitClaim.Data.Migrations
 
             modelBuilder.Entity("SubmitClaim.Models.LecturerClaim", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<string>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
@@ -241,7 +244,6 @@ namespace SubmitClaim.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
