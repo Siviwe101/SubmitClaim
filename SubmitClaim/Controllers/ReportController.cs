@@ -7,10 +7,11 @@ using Microsoft.EntityFrameworkCore;
 using SubmitClaim.Data;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using Microsoft.AspNetCore.Identity;
 
 namespace SubmitClaim.Controllers
 {
-    public class ReportController(ApplicationDbContext context) : Controller
+    public class ReportController(ApplicationDbContext context, UserManager<IdentityUser> userManager) : Controller
     {
         // GET: Report/Index
         public IActionResult Index()

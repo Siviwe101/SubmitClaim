@@ -6,19 +6,12 @@ using System.Threading.Tasks;
 
 namespace SubmitClaim.Controllers
 {
-    public class AdminController : Controller
+    public class AdminController(UserManager<IdentityUser> userManager) : Controller
     {
-        private readonly UserManager<IdentityUser> _userManager;
-
-        public AdminController(UserManager<IdentityUser> userManager)
-        {
-            _userManager = userManager;
-        }
-
         // GET: Admin/Users
         public IActionResult Index()
         {
-            var users = _userManager.Users.ToList();
+            var users = userManager.Users.ToList();
             return View(users);
         }
 
@@ -27,7 +20,7 @@ namespace SubmitClaim.Controllers
         {
             if (string.IsNullOrEmpty(id)) return NotFound();
 
-            var user = await _userManager.FindByIdAsync(id);
+            var user = await userManager.FindByIdAsync(id);
             if (user == null) return NotFound();
 
             return View(user);
@@ -42,14 +35,14 @@ namespace SubmitClaim.Controllers
 
             if (ModelState.IsValid)
             {
-                var user = await _userManager.FindByIdAsync(id);
+                var user = await userManager.FindByIdAsync(id);
                 if (user == null) return NotFound();
 
                 // Update user details
                 user.UserName = model.UserName;
                 user.Email = model.Email;
                 user.PhoneNumber = model.PhoneNumber;
-                var result = await _userManager.UpdateAsync(user);
+                var result = await userManager.UpdateAsync(user);
                 if (result.Succeeded) return RedirectToAction(nameof(Index));
 
                 // Display errors if any
