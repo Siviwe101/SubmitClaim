@@ -245,8 +245,20 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
+      "Id": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/uploads/00621437-8fc2-414a-be23-24acf0e62406.pdf",
+      "PackagePath": "staticwebassets/uploads/00621437-8fc2-414a-be23-24acf0e62406.pdf"
+    },
+    {
+      "Id": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/uploads/1d12e370-03dd-428e-b3e1-05b0f05c8285.pdf",
+      "PackagePath": "staticwebassets/uploads/1d12e370-03dd-428e-b3e1-05b0f05c8285.pdf"
+    },
+    {
       "Id": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/uploads/694f9e84-19c7-4af9-9884-0e1207cad3c8.pdf",
       "PackagePath": "staticwebassets/uploads/694f9e84-19c7-4af9-9884-0e1207cad3c8.pdf"
+    },
+    {
+      "Id": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/uploads/ab1059c3-e33d-4757-889f-11fa5603aae6.pdf",
+      "PackagePath": "staticwebassets/uploads/ab1059c3-e33d-4757-889f-11fa5603aae6.pdf"
     },
     {
       "Id": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/uploads/b04a5dda-e9c1-4e05-ad42-9baf1a41cd31.pdf",
@@ -255,6 +267,10 @@
     {
       "Id": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/uploads/b475041c-0613-453d-a4af-1eb62786fc19.pdf",
       "PackagePath": "staticwebassets/uploads/b475041c-0613-453d-a4af-1eb62786fc19.pdf"
+    },
+    {
+      "Id": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/uploads/e5012329-cbd2-4a17-b266-d9e7cbbe0e73.pdf",
+      "PackagePath": "staticwebassets/uploads/e5012329-cbd2-4a17-b266-d9e7cbbe0e73.pdf"
     },
     {
       "Id": "/Users/ElonaFrance/Documents/GitHub/SubmitClaim/SubmitClaim/wwwroot/uploads/f3bc2a2c-9797-41e0-8924-30ba3f3caced.pdf",

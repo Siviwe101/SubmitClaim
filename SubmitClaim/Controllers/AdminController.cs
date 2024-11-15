@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using SubmitClaim.Models;
-using System.Threading.Tasks;
+
 
 namespace SubmitClaim.Controllers
 {
+    [Authorize] // Restrict access to users in the "Admin" role
     public class AdminController(UserManager<IdentityUser> userManager) : Controller
     {
         // GET: Admin/Users
@@ -43,6 +43,7 @@ namespace SubmitClaim.Controllers
                 user.Email = model.Email;
                 user.PhoneNumber = model.PhoneNumber;
                 var result = await userManager.UpdateAsync(user);
+
                 if (result.Succeeded) return RedirectToAction(nameof(Index));
 
                 // Display errors if any

@@ -134,6 +134,7 @@ namespace SubmitClaim.Controllers
         }
         
         // GET: Claims/ManageClaims
+        [Authorize]
         public async Task<IActionResult> ManageClaims()
         {
             var claims = await context.LecturerClaims.ToListAsync();
